@@ -9,7 +9,7 @@ body {
   background-color: yellow;
   position: relative;
   margin: 0;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   min-height: 100%;
 }
 
@@ -43,44 +43,4 @@ fieldset {
   bottom: 0;
   left: 0;
   text-align: center;
-}
-
-.navbar {
-  justify-content: center;
-}
-
-.scroll {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  display: none;
-}
-
-.container {
-  margin-top: 50px;
-}
-
-.list-group-item {
-  cursor: pointer;
-}
-
-.correct {
-  background-color: #289a27;
-}
-
-.incorrect {
-  background-color: #c41a21;
-}
-
-.buttons {
-  padding: 10px 10px 10px 0;
-}
-
-.numberOfQuestion {
-  color: blue;
-  font-weight: bold;
-}
-
-.progress {
-  width: 100%;
 }
