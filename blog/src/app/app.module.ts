@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     HomeComponent,
     BlogComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
