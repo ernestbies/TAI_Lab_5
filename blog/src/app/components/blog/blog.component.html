@@ -1,7 +1,4 @@
-<p>blog works!</p>
-
-<scroll-to-top></scroll-to-top>
-
-<footer class="footerClass">
-  <p>Copyrights &copy; | Ernest Bieś 2020</p>
-</footer>
+<div *ngFor="let item of items$ | filter: filterText">
+  <blog-item [image]="item.url" [text]="item.title">
+  </blog-item>
+</div>
