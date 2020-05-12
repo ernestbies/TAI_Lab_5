@@ -2,7 +2,7 @@ import {
   Component,
   ViewChild,
   ElementRef,
-  AfterViewInit,
+  AfterViewInit, OnInit,
 } from '@angular/core';
 import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {DataService} from "../../services/data.service";
@@ -28,9 +28,10 @@ export class SelectizeComponent implements AfterViewInit {
         map(event => event['target'].value),
         debounceTime(400),
         distinctUntilChanged(),
-        switchMap(value => this.dataService.getByText({text: value}))
+        switchMap(value => this.dataService.getByText({content: value}))
       ).subscribe(results => {
-      this.posts$ = results;
+        console.log(results);
+        this.posts$ = results;
     });
   }
 }
