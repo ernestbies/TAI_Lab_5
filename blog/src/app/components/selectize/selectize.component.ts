@@ -30,7 +30,6 @@ export class SelectizeComponent implements AfterViewInit {
         distinctUntilChanged(),
         switchMap(value => this.dataService.getByText({content: value}))
       ).subscribe(results => {
-        console.log(results);
         this.posts$ = results;
     });
   }
