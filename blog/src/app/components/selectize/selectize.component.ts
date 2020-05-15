@@ -2,7 +2,7 @@ import {
   Component,
   ViewChild,
   ElementRef,
-  AfterViewInit, OnInit,
+  AfterViewInit,
 } from '@angular/core';
 import {debounceTime, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {DataService} from "../../services/data.service";

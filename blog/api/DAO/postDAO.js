@@ -34,7 +34,7 @@ async function get(id) {
 }
 
 async function search(content) {
-  return PostModel.findOne({content: content.content}).then(function (result) {
+  return PostModel.find(content).then(function (result) {
     if (result) {
       return mongoConverter(result);
     }
