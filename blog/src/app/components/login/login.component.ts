@@ -38,4 +38,9 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+  isValid() {
+    return (this.credentials.login !== '' && this.credentials.password !== '');
+  }
+
 }

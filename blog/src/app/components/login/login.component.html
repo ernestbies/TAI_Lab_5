@@ -14,7 +14,7 @@
           <input [(ngModel)]="credentials.password" type="password" class="rounded"
                  name="password" placeholder="Hasło..." title="Wprowadź hasło">
         </div>
-        <button (click)="signIn()" class="btn btn-primary" type="submit" title="Przycisk zaloguj">
+        <button (click)="signIn()" class="btn btn-primary" type="submit" title="Przycisk zaloguj" [disabled]="!isValid()">
           Zaloguj
         </button>
       </div>
