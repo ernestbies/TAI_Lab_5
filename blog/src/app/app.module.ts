@@ -1,30 +1,30 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
-import { BlogItemComponent } from './components/blog-item/blog-item.component';
-import { BlogItemTextComponent } from './components/blog-item-text/blog-item-text.component';
-import { BlogItemImageComponent } from './components/blog-item-image/blog-item-image.component';
-import { BlogItemDetailsComponent } from './components/blog-item-details/blog-item-details.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HomeComponent} from './components/home/home.component';
+import {BlogComponent} from './components/blog/blog.component';
+import {ContactComponent} from './components/contact/contact.component';
+import {NavbarComponent} from './navbar/navbar.component';
+import {ScrollToTopComponent} from './scroll-to-top/scroll-to-top.component';
+import {BlogItemComponent} from './components/blog-item/blog-item.component';
+import {BlogItemTextComponent} from './components/blog-item-text/blog-item-text.component';
+import {BlogItemImageComponent} from './components/blog-item-image/blog-item-image.component';
+import {BlogItemDetailsComponent} from './components/blog-item-details/blog-item-details.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import { DataService } from "./services/data.service";
-import { SummaryPipe } from './pipes/summary.pipe';
-import { SearchBarComponent } from './shared/search-bar/search-bar.component';
+import {DataService} from "./services/data.service";
+import {SummaryPipe} from './pipes/summary.pipe';
+import {SearchBarComponent} from './shared/search-bar/search-bar.component';
 import {FormsModule} from "@angular/forms";
-import { BlogHomeComponent } from './components/blog-home/blog-home.component';
-import { FilterPipe } from './pipes/filter.pipe';
-import { TextFormatDirective } from './directives/text-format.directive';
-import { SelectizeComponent } from './components/selectize/selectize.component';
-import { AddPostComponent } from './components/add-post/add-post.component';
+import {BlogHomeComponent} from './components/blog-home/blog-home.component';
+import {FilterPipe} from './pipes/filter.pipe';
+import {TextFormatDirective} from './directives/text-format.directive';
+import {SelectizeComponent} from './components/selectize/selectize.component';
+import {AddPostComponent} from './components/add-post/add-post.component';
 import {AuthService} from "./services/auth/auth.service";
 import {AuthInterceptor} from "./services/auth/auth.interceptor";
-import { LoginComponent } from './components/login/login.component';
-import { SignupComponent } from './components/signup/signup.component';
+import {LoginComponent} from './components/login/login.component';
+import {SignupComponent} from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -54,11 +54,16 @@ import { SignupComponent } from './components/signup/signup.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi: true
-  },DataService, AuthService],
+  providers: [
+    DataService,
+    AuthService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

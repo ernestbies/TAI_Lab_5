@@ -1,15 +1,29 @@
-<form action="post" autocomplete="off" method="POST">
-  <div class="input-group">
-    <input [(ngModel)]="credentials.login" type="text" class="form-control"
-           name="username" placeholder="Nazwa" title="Wprowadź login">
-  </div>
+<div class="form">
+  <form action="post" autocomplete="off" method="POST" style="align-items: center">
+    <fieldset>
+        <legend class="w-auto">Logowanie</legend>
+        <div style="margin: 2rem">
+        <div class="input-group" style="flex-direction: column; margin-bottom: 10px">
+          <label>Wprowadź nazwę użytkownika: </label>
+          <input [(ngModel)]="credentials.login" type="text" class="rounded"
+                 name="username" placeholder="Nazwa użytkownika..." title="Wprowadź login">
+        </div>
 
-  <div class="input-group">
-    <input [(ngModel)]="credentials.password" type="password" class="form-control"
-           name="password" placeholder="Hasło" title="Wprowadź hasło">
-  </div>
+        <div class="input-group" style="flex-direction: column; margin-bottom: 10px">
+          <label>Wprowadź swoje hasło: </label>
+          <input [(ngModel)]="credentials.password" type="password" class="rounded"
+                 name="password" placeholder="Hasło..." title="Wprowadź hasło">
+        </div>
+        <button (click)="signIn()" class="btn btn-primary" type="submit" title="Przycisk zaloguj">
+          Zaloguj
+        </button>
+      </div>
+    </fieldset>
+  </form>
+</div>
 
-  <button (click)="signIn()" class="btn btn-lg btn-pink btn-block" type="submit" title="Przycisk zaloguj">
-    Zaloguj
-  </button>
-</form>
+<scroll-to-top></scroll-to-top>
+
+<footer class="footerClass">
+  <p>Copyrights &copy; | Ernest Bieś 2020</p>
+</footer>

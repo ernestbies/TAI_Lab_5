@@ -9,10 +9,10 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  private logged = true;
-  private logout = true;
+  private logged;
+  private logout;
 
-  credentials = {
+  public credentials = {
     login: '',
     password: ''
   };
