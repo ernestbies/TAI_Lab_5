@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/nodemon index"
+    "start": "node index.js"
   },
   "author": "Ernest Bieś",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "mongoose": "5.9.12",
     "mongoose-unique-validator": "2.0.3",
     "morgan": "^1.10.0",
+    "bluebird": "^3.7.2",
     "sha1": "^1.1.1"
   },
   "devDependencies": {

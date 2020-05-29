@@ -7,7 +7,7 @@ import {Token} from '../../models/token';
 @Injectable()
 export class AuthService {
 
-  private url = 'http://localhost:3000/api';
+  private url = 'https://blog-tai-ernestbies.herokuapp.com/api';
 
   constructor(private http: HttpClient) {
   }
